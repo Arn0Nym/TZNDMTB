@@ -12,4 +12,4 @@ The app module is served by TizenBrew; it is not a separately installed `.wgt` t
 
 ## HTTPS certificate requirement
 
-The configured address is `https://192.168.1.43:8766/library`. The page returns HTTP 200 when certificate verification is bypassed, but the development PC does not trust the HTTPS certificate. The HTTP version returns 400. The TV must trust the certificate for the app to load the library; this module intentionally does not disable TLS verification.
+The configured address is `https://192.168.1.43:8766/library`. During testing, Avast Web/Mail Shield intercepted the PC's HTTPS connection and presented a locally generated certificate issued by `Avast Web/Mail Shield Untrusted Root`. That does not identify the certificate the TV receives from the YourTube server, so it does not establish whether the TV trusts the server certificate. The plain HTTP URL returns 400. Check the HTTPS URL in the TV's browser if the module stalls; this module intentionally does not disable TLS verification.
