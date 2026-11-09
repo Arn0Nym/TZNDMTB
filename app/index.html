@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>YourTube</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Arial, sans-serif;
+        background: #101116;
+        color: #f5f5f7;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+
+      main { padding: 48px; }
+
+      h1 {
+        margin: 0 0 16px;
+        font-size: 56px;
+      }
+
+      p {
+        margin: 0 0 32px;
+        color: #b7b8c2;
+        font-size: 28px;
+      }
+
+      a {
+        display: inline-block;
+        padding: 18px 32px;
+        border: 3px solid #ff5252;
+        border-radius: 12px;
+        color: #fff;
+        font-size: 28px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      a:focus, a:hover {
+        outline: 4px solid #fff;
+        outline-offset: 4px;
+        background: #c62828;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>YourTube</h1>
+      <p>Deine Mediathek wird geöffnet …</p>
+      <a id="open" href="https://192.168.1.43:8766/library">YourTube starten</a>
+    </main>
+    <script>
+      (function () {
+        var target = 'https://192.168.1.43:8766/library';
+        window.setTimeout(function () {
+          window.location.replace(target);
+        }, 700);
+      }());
+    </script>
+  </body>
+</html>

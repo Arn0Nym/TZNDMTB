@@ -1,0 +1,9 @@
+{
+  "name": "yourtube-tv",
+  "version": "1.0.0",
+  "description": "Open the local YourTube library on a Samsung TV",
+  "packageType": "app",
+  "appName": "YourTube",
+  "appPath": "app/index.html",
+  "keys": []
+}
